@@ -62,9 +62,9 @@ st.markdown(
 with st.sidebar:
     st.header("⚙️ Configuration")
     api_key = st.text_input(
-        "Anthropic API Key",
+        "Google Gemini API Key",
         type="password",
-        help="Get your free key at console.anthropic.com"
+        help="Get your free key at aistudio.google.com/apikey"
     )
     domain = st.selectbox(
         "Business Domain",
@@ -173,7 +173,7 @@ with col2:
     )
 
 if not api_key:
-    st.info("👈 Add your Anthropic API key in the sidebar to get started.")
+    st.info("👈 Add your Gemini API key in the sidebar to get started.")
 elif not process_text:
     st.info("👆 Paste a process description, upload a PDF, or load an example above.")
 

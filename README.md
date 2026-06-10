@@ -8,6 +8,8 @@ Built for **Genpact MT/BA 4A** | **IIT Roorkee Hostel Council Open Projects 2026
 
 ## 🚀 Live Demo
 
+https://bizsense-ai-wzygyunmguauvoye4vjwa6.streamlit.app/
+
 [**→ Try it live on Streamlit Cloud**](https://your-app-name.streamlit.app)  
 *(Replace with your deployed URL)*
 

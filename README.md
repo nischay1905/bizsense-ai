@@ -1,4 +1,4 @@
-# 🧠 BizSense AI — Intelligent Business Process Analyzer
+#  BizSense AI — Intelligent Business Process Analyzer
 
 > Identify inefficiencies, map automation opportunities, and estimate ROI from any business process description using AI.
 
@@ -6,18 +6,19 @@ Built for **Genpact MT/BA 4A** | **IIT Roorkee Hostel Council Open Projects 2026
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
 https://bizsense-ai-wzygyunmguauvoye4vjwa6.streamlit.app/
 
-[**→ Try it live on Streamlit Cloud**](https://your-app-name.streamlit.app)  
+[**→ Try it live on Streamlit Cloud**](https://bizsense-ai-wzygyunmguauvoye4vjwa6.streamlit.app/
+)  
 *(Replace with your deployed URL)*
 
 ![BizSense AI Demo](assets/demo.gif)
 
 ---
 
-## 💡 What it does
+##  What it does
 
 Paste or upload any business process (invoice processing, IT helpdesk, HR recruitment, etc.) and BizSense AI will:
 
@@ -29,7 +30,7 @@ Paste or upload any business process (invoice processing, IT helpdesk, HR recrui
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 User Input (text / PDF)
@@ -49,7 +50,7 @@ User Input (text / PDF)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -61,7 +62,7 @@ User Input (text / PDF)
 
 ---
 
-## ⚡ Local Setup
+##  Local Setup
 
 ```bash
 # 1. Clone the repo
@@ -79,7 +80,7 @@ You'll need a free Anthropic API key from [console.anthropic.com](https://consol
 
 ---
 
-## ☁️ Deploy to Streamlit Cloud (Free)
+##  Deploy to Streamlit Cloud (Free)
 
 1. Push this repo to GitHub
 2. Go to [share.streamlit.io](https://share.streamlit.io)
@@ -88,7 +89,7 @@ You'll need a free Anthropic API key from [console.anthropic.com](https://consol
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 bizsense-ai/
@@ -101,7 +102,7 @@ bizsense-ai/
 
 ---
 
-## 🎯 Business Impact
+##  Business Impact
 
 Tested on 3 real-world process types:
 
@@ -113,10 +114,10 @@ Tested on 3 real-world process types:
 
 ---
 
-## 👤 Author
+##  Author
 
-**[Your Name]** — EE, IIT Roorkee  
-[LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
+**[Nischay Jiwankar]** — EE, IIT Roorkee  
+ | [GitHub](https://github.com/nischay1905)
 
 ---
 

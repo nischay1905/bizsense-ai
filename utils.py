@@ -1,16 +1,28 @@
 import json, re, requests
 
 def call_claude_api(prompt: str, api_key: str) -> str:
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    """Call Groq (Llama 3.3 70B) and return raw text response."""
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
     body = {
-        "system_instruction": {"parts": [{"text": "You are a business process automation expert. Always respond with valid JSON only. No markdown fences, no text before or after JSON."}]},
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 2048}
+        "model": "llama-3.3-70b-versatile",
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a business process automation expert. Always respond with valid JSON only. No markdown fences, no explanatory text before or after the JSON."
+            },
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.3,
+        "max_tokens": 2048
     }
     try:
-        r = requests.post(url, json=body, timeout=60)
+        r = requests.post("https://api.groq.com/openai/v1/chat/completions",
+                          headers=headers, json=body, timeout=60)
         r.raise_for_status()
-        return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        return r.json()["choices"][0]["message"]["content"]
     except requests.exceptions.HTTPError as e:
         return f'{{"error": "API error: {e.response.status_code} — {e.response.text[:300]}"}}'
     except Exception as e:

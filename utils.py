@@ -24,9 +24,12 @@ def call_claude_api(prompt: str, api_key: str) -> str:
         r.raise_for_status()
         return r.json()["choices"][0]["message"]["content"]
     except requests.exceptions.HTTPError as e:
-        return f'{{"error": "API error: {e.response.status_code} — {e.response.text[:300]}"}}'
+        status = e.response.status_code
+        text = e.response.text[:300].encode("ascii", errors="replace").decode("ascii")
+        return f'{{"error": "API error: {status} - {text}"}}'
     except Exception as e:
-        return f'{{"error": "Unexpected error: {str(e)}"}}'
+        msg = str(e).encode("ascii", errors="replace").decode("ascii")
+        return f'{{"error": "Unexpected error: {msg}"}}'
 
 def parse_llm_response(raw: str) -> dict:
     cleaned = re.sub(r"```(?:json)?", "", raw).strip()
@@ -44,6 +47,6 @@ def extract_text_from_pdf(uploaded_file) -> str:
         doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
         text = "\n".join(p.get_text() for p in doc)
         doc.close()
-        return text.strip() or "⚠️ No text found in PDF."
+        return text.strip() or "No text found in PDF."
     except Exception as e:
-        return f"⚠️ Error: {e}"
+        return f"Error reading PDF: {e}"

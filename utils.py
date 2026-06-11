@@ -1,7 +1,7 @@
 import json, re, requests
 
 def call_claude_api(prompt: str, api_key: str) -> str:
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
     body = {
         "system_instruction": {"parts": [{"text": "You are a business process automation expert. Always respond with valid JSON only. No markdown fences, no text before or after JSON."}]},
         "contents": [{"parts": [{"text": prompt}]}],

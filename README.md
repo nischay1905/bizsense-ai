@@ -119,8 +119,3 @@ Tested on 3 real-world process types:
 **[Nischay Jiwankar]** — EE, IIT Roorkee  
  | [GitHub](https://github.com/nischay1905)
 
----
-
-## 📄 License
-
-MIT License — free to use, modify, and distribute.
